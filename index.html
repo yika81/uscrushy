@@ -9,9 +9,10 @@
 body{
     margin:0;
     padding:0;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#0f0f0f;
     color:white;
+    overflow-x:hidden;
 }
 
 .container{
@@ -27,29 +28,33 @@ body{
 
 .header h1{
     font-size:28px;
+    margin-bottom:10px;
 }
 
 .sub{
     color:#bbbbbb;
-    margin-top:10px;
+    font-size:14px;
 }
 
-.hero{
-    width:100%;
-    border-radius:20px;
-    margin-top:20px;
+.chat-box{
+    margin-top:30px;
 }
 
 .message{
-    background:#1c1c1c;
+    background:#1f1f1f;
     padding:14px;
-    border-radius:14px;
-    margin-top:12px;
+    border-radius:15px;
+    margin-bottom:12px;
 }
 
 .name{
-    color:#ff2d55;
+    color:#ff3b6b;
     font-weight:bold;
+}
+
+.typing{
+    opacity:0.6;
+    font-style:italic;
 }
 
 .cta{
@@ -63,6 +68,13 @@ body{
     font-weight:bold;
     margin-top:25px;
     cursor:pointer;
+    box-shadow:0 0 20px rgba(255,45,85,0.4);
+}
+
+.hero{
+    width:100%;
+    border-radius:18px;
+    margin-top:20px;
 }
 
 .popup{
@@ -70,10 +82,14 @@ body{
     bottom:20px;
     left:20px;
     background:#1f1f1f;
+    color:white;
     padding:10px 14px;
     border-radius:12px;
     font-size:13px;
+    opacity:0.95;
+    z-index:999;
 }
+
 </style>
 </head>
 
@@ -86,23 +102,27 @@ body{
 <div class="sub">Women near you are waiting for your reply 😘</div>
 </div>
 
-<img class="hero" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop">
+<img class="hero" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop" alt="girl">
+
+<div class="chat-box">
 
 <div class="message">
 <span class="name">Jessica:</span>
-Hey... are you ignoring me? 😘
+"Hey... are you ignoring me? 😘"
 </div>
 
 <div class="message">
 <span class="name">Amanda:</span>
-I saw your profile... you look interesting 😉
+"I saw your profile... you look interesting 😉"
 </div>
 
-<div class="message">
+<div class="message typing">
 Typing...
 </div>
 
-<button class="cta" onclick="goOffer()">
+</div>
+
+<button class="cta" onclick="startFlow()">
 See New Messages 🔥
 </button>
 
@@ -110,21 +130,65 @@ See New Messages 🔥
 
 <script>
 
-function goOffer() {
+function startFlow(){
 
-window.location.href = "https://w24q8.bemobtrk.com/click";
+document.body.innerHTML = `
+
+<div class="container">
+
+<div class="header">
+<h1>Are You Over 18?</h1>
+<div class="sub">Adult dating content ahead</div>
+</div>
+
+<button class="cta" onclick="step2()">
+YES, CONTINUE
+</button>
+
+</div>
+
+`;
+
+}
+
+function step2(){
+
+document.body.innerHTML = `
+
+<div class="container">
+
+<div class="header">
+<h1>Who Would You Like To Meet?</h1>
+<div class="sub">Choose your preference below</div>
+</div>
+
+<button class="cta" onclick="goOffer()">
+Women Near Me 💋
+</button>
+
+</div>
+
+`;
+
+}
+
+function goOffer(){
+
+window.location.href="https://vfgwh.bemobtrcks.com/go/d41c5084-ec9d-443e-9c5a-2a554f5ad6bc";
 
 }
 
 setInterval(function(){
 
-var names = ["Jessica","Amanda","Emma","Mia","Sophie"];
+var names = ["Sophie","Chloe","Emma","Mia","Jessica","Amanda"];
+
+var name = names[Math.floor(Math.random()*names.length)];
 
 var popup = document.createElement("div");
 
-popup.className = "popup";
+popup.className="popup";
 
-popup.innerHTML = "💬 " + names[Math.floor(Math.random()*names.length)] + " is online now";
+popup.innerHTML = "💬 " + name + " is online now (2km away)";
 
 document.body.appendChild(popup);
 
