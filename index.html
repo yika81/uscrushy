@@ -1,204 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Messages Nearby</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Reward</title>
 
-<style>
-body{
-    margin:0;
-    padding:0;
-    font-family:Arial, sans-serif;
-    background:#0f0f0f;
-    color:white;
-    overflow-x:hidden;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container{
-    max-width:450px;
-    margin:auto;
-    padding:20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-.header{
-    text-align:center;
-    margin-top:20px;
-}
+        .card {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
 
-.header h1{
-    font-size:28px;
-    margin-bottom:10px;
-}
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-.sub{
-    color:#bbbbbb;
-    font-size:14px;
-}
+        .content {
+            padding: 30px;
+        }
 
-.chat-box{
-    margin-top:30px;
-}
+        h1 {
+            font-size: 32px;
+            color: #111;
+            margin-bottom: 15px;
+        }
 
-.message{
-    background:#1f1f1f;
-    padding:14px;
-    border-radius:15px;
-    margin-bottom:12px;
-}
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
 
-.name{
-    color:#ff3b6b;
-    font-weight:bold;
-}
+        .btn {
+            display: inline-block;
+            background: #00c853;
+            color: white;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.typing{
-    opacity:0.6;
-    font-style:italic;
-}
+        .btn:hover {
+            transform: scale(1.05);
+        }
 
-.cta{
-    width:100%;
-    padding:18px;
-    border:none;
-    border-radius:14px;
-    background:#ff2d55;
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-    margin-top:25px;
-    cursor:pointer;
-    box-shadow:0 0 20px rgba(255,45,85,0.4);
-}
-
-.hero{
-    width:100%;
-    border-radius:18px;
-    margin-top:20px;
-}
-
-.popup{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#1f1f1f;
-    color:white;
-    padding:10px 14px;
-    border-radius:12px;
-    font-size:13px;
-    opacity:0.95;
-    z-index:999;
-}
-
-</style>
+        .small {
+            margin-top: 18px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" alt="Smiling woman">
 
-<div class="header">
-<h1>🔥 3 Unread Messages</h1>
-<div class="sub">Women near you are waiting for your reply 😘</div>
+    <div class="content">
+        <h1>Congratulations!</h1>
+
+        <p>
+            You may qualify for this exclusive limited-time reward.
+            Click below to continue and check your eligibility now.
+        </p>
+
+        <a class="btn" href="https://vfgwh.bemobtrcks.com/go/d41c5084-ec9d-443e-9c5a-2a554f5ad6bc?cost={cost}&click_id={click_id}&campaign_id={campaign_id}&creative_id={creative_id}&category={category}&keyword={keywords}&referrer={referrer}&site_id={site_id}&format={format}&ip={ip}&geo={geo}&pricing_model={pricing_model}">
+            CONTINUE
+        </a>
+
+        <div class="small">
+            Limited spots available today.
+        </div>
+    </div>
 </div>
-
-<img class="hero" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop" alt="girl">
-
-<div class="chat-box">
-
-<div class="message">
-<span class="name">Jessica:</span>
-"Hey... are you ignoring me? 😘"
-</div>
-
-<div class="message">
-<span class="name">Amanda:</span>
-"I saw your profile... you look interesting 😉"
-</div>
-
-<div class="message typing">
-Typing...
-</div>
-
-</div>
-
-<button class="cta" onclick="startFlow()">
-See New Messages 🔥
-</button>
-
-</div>
-
-<script>
-
-function startFlow(){
-
-document.body.innerHTML = `
-
-<div class="container">
-
-<div class="header">
-<h1>Are You Over 18?</h1>
-<div class="sub">Adult dating content ahead</div>
-</div>
-
-<button class="cta" onclick="step2()">
-YES, CONTINUE
-</button>
-
-</div>
-
-`;
-
-}
-
-function step2(){
-
-document.body.innerHTML = `
-
-<div class="container">
-
-<div class="header">
-<h1>Who Would You Like To Meet?</h1>
-<div class="sub">Choose your preference below</div>
-</div>
-
-<button class="cta" onclick="goOffer()">
-Women Near Me 💋
-</button>
-
-</div>
-
-`;
-
-}
-
-function goOffer(){
-
-window.location.href="https://vfgwh.bemobtrcks.com/go/d41c5084-ec9d-443e-9c5a-2a554f5ad6bc";
-
-}
-
-setInterval(function(){
-
-var names = ["Sophie","Chloe","Emma","Mia","Jessica","Amanda"];
-
-var name = names[Math.floor(Math.random()*names.length)];
-
-var popup = document.createElement("div");
-
-popup.className="popup";
-
-popup.innerHTML = "💬 " + name + " is online now (2km away)";
-
-document.body.appendChild(popup);
-
-setTimeout(function(){
-popup.remove();
-},3000);
-
-},5000);
-
-</script>
 
 </body>
 </html>
