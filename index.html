@@ -3,92 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Messages Nearby</title>
+<title>Meet New People Nearby</title>
 
 <style>
+
 body{
     margin:0;
     padding:0;
+    background:#f4f4f4;
     font-family:Arial,sans-serif;
-    background:#0f0f0f;
-    color:white;
-    overflow-x:hidden;
+    color:#222;
 }
 
 .container{
-    max-width:450px;
+    max-width:420px;
     margin:auto;
-    padding:20px;
-}
-
-.header{
-    text-align:center;
-    margin-top:20px;
-}
-
-.header h1{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.sub{
-    color:#bbbbbb;
-    font-size:14px;
+    background:#fff;
+    min-height:100vh;
 }
 
 .hero{
     width:100%;
-    border-radius:20px;
-    margin-top:20px;
+    height:320px;
+    object-fit:cover;
 }
 
-.chat-box{
-    margin-top:25px;
+.content{
+    padding:24px;
 }
 
-.message{
-    background:#1f1f1f;
-    padding:14px;
-    border-radius:14px;
-    margin-bottom:12px;
-}
-
-.name{
+.badge{
+    display:inline-block;
+    background:#ffe8ef;
     color:#ff2d55;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
     font-weight:bold;
+    margin-bottom:18px;
 }
 
-.typing{
-    opacity:0.6;
-    font-style:italic;
+h1{
+    font-size:31px;
+    line-height:1.2;
+    margin-bottom:14px;
+}
+
+.desc{
+    color:#555;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:16px;
+    padding:16px;
+    margin-bottom:14px;
+}
+
+.card strong{
+    display:block;
+    margin-bottom:6px;
 }
 
 .cta{
     width:100%;
-    padding:18px;
     border:none;
-    border-radius:14px;
     background:#ff2d55;
     color:white;
-    font-size:20px;
+    padding:18px;
+    border-radius:16px;
+    font-size:19px;
     font-weight:bold;
-    margin-top:25px;
     cursor:pointer;
-    box-shadow:0 0 20px rgba(255,45,85,0.4);
+    margin-top:22px;
 }
 
-.popup{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#1f1f1f;
-    color:white;
-    padding:10px 14px;
-    border-radius:12px;
-    font-size:13px;
+.cta:hover{
     opacity:0.95;
-    z-index:999;
 }
+
+.counter{
+    text-align:center;
+    color:#ff2d55;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.small{
+    text-align:center;
+    color:#888;
+    font-size:12px;
+    margin-top:20px;
+    line-height:1.5;
+}
+
+.online{
+    color:#19b45b;
+    font-weight:bold;
+}
+
 </style>
 </head>
 
@@ -96,100 +114,59 @@ body{
 
 <div class="container">
 
-<div class="header">
-<h1>🔥 3 Unread Messages</h1>
-<div class="sub">Women near you are waiting for your reply 😘</div>
+<img class="hero"
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+alt="Dating">
+
+<div class="content">
+
+<div class="badge">
+● <span class="online">Members Online Now</span>
 </div>
 
-<img class="hero" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop" alt="girl">
+<h1>Meet Local Singles Near You</h1>
 
-<div class="chat-box">
-
-<div class="message">
-<span class="name">Jessica:</span>
-"Hey... are you ignoring me? 😘"
+<div class="desc">
+Join thousands of active members already chatting and making new connections nearby.
 </div>
 
-<div class="message">
-<span class="name">Amanda:</span>
-"I saw your profile... you look interesting 😉"
+<div class="card">
+<strong>✔ Verified Profiles</strong>
+Browse active members in your area safely and privately.
 </div>
 
-<div class="message typing">
-Typing...
+<div class="card">
+<strong>✔ Instant Matching</strong>
+Connect with people who share similar interests.
 </div>
 
+<div class="card">
+<strong>✔ Mobile Friendly</strong>
+Fast access from any smartphone or tablet.
 </div>
 
-<button class="cta" onclick="startFlow()">
-See New Messages 🔥
+<div class="counter">
+Several people near you are online right now 👀
+</div>
+
+<button class="cta" onclick="goOffer()">
+Start Chatting Now
 </button>
 
+<div class="small">
+18+ only • Privacy protected• Terms apply
+</div>
+
+</div>
 </div>
 
 <script>
 
-function startFlow(){
-
-document.body.innerHTML = `
-<div class="container">
-
-<div class="header">
-<h1>Are You Over 18?</h1>
-<div class="sub">Adult dating content ahead</div>
-</div>
-
-<button class="cta" onclick="step2()">
-YES, CONTINUE
-</button>
-
-</div>
-`;
-
-}
-
-function step2(){
-
-document.body.innerHTML = `
-<div class="container">
-
-<div class="header">
-<h1>Who Would You Like To Meet?</h1>
-<div class="sub">Choose your preference below</div>
-</div>
-
-<button class="cta" onclick="goOffer()">
-Women Near Me 💋
-</button>
-
-</div>
-`;
-
-}
-
 function goOffer(){
 
-window.location.href="https://trk.uscrushy.online/click";
+window.location.href='https://trk.uscrushy.online/click';
 
 }
-
-setInterval(function(){
-
-var names = ["Jessica","Amanda","Emma","Mia","Sophie"];
-
-var popup = document.createElement("div");
-
-popup.className="popup";
-
-popup.innerHTML="💬 " + names[Math.floor(Math.random()*names.length)] + " is online now";
-
-document.body.appendChild(popup);
-
-setTimeout(function(){
-popup.remove();
-},3000);
-
-},5000);
 
 </script>
 
