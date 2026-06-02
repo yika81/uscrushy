@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meet Local Singles</title>
-
-<style>
-
+<title>Meet Latino Singles Near You</title><style>
 body{
     margin:0;
     padding:0;
-    background:#f4f4f4;
+    background:#f5f5f5;
     font-family:Arial,sans-serif;
     color:#222;
 }
@@ -24,198 +20,90 @@ body{
 
 .hero{
     width:100%;
-    height:310px;
+    height:320px;
     object-fit:cover;
 }
 
 .content{
     padding:24px;
+    text-align:center;
 }
 
 .badge{
     display:inline-block;
     background:#ffe8ef;
     color:#ff2d55;
-    padding:8px 14px;
-    border-radius:30px;
+    padding:8px 16px;
+    border-radius:25px;
     font-size:13px;
     font-weight:bold;
     margin-bottom:18px;
 }
 
 h1{
-    font-size:31px;
+    font-size:32px;
     line-height:1.2;
     margin-bottom:14px;
 }
 
 .desc{
+    font-size:17px;
     color:#555;
-    font-size:16px;
-    line-height:1.6;
-    margin-bottom:24px;
-}
-
-.card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:16px;
-    padding:16px;
-    margin-bottom:14px;
-}
-
-.card strong{
-    display:block;
-    margin-bottom:6px;
+    line-height:1.5;
+    margin-bottom:20px;
 }
 
 .cta{
     width:100%;
-    border:none;
     background:#ff2d55;
-    color:white;
+    color:#fff;
+    border:none;
+    border-radius:14px;
     padding:18px;
-    border-radius:16px;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
     cursor:pointer;
-    margin-top:22px;
-    box-shadow:0 8px 20px rgba(255,45,85,0.25);
+    margin-bottom:20px;
 }
 
-.cta:hover{
-    opacity:0.96;
+.features{
+    background:#fafafa;
+    border-radius:14px;
+    padding:16px;
+    text-align:left;
 }
 
-.live{
-    text-align:center;
-    color:#ff2d55;
-    font-size:15px;
-    font-weight:bold;
-    margin-top:20px;
+.feature{
+    margin:10px 0;
+    font-size:16px;
 }
 
-.small{
+.footer{
     text-align:center;
     color:#888;
     font-size:12px;
-    margin-top:18px;
+    margin-top:20px;
 }
-
-.popup{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#1f1f1f;
-    color:white;
-    padding:12px 16px;
-    border-radius:12px;
-    font-size:13px;
-    opacity:0.95;
-    z-index:999;
-    animation:fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(10px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<img class="hero"
+</style></head><body><div class="container"><img class="hero"
 src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop"
 alt="Dating">
 
-<div class="content">
-
-<div class="badge">
-● Active Members Nearby
-</div>
-
-<h1>Find New Connections Near You</h1>
-
-<div class="desc">
-Meet local people already online and open to chatting, friendships, and new connections.
-</div>
-
-<div class="card">
-<strong>✔ Verified Profiles</strong>
-Browse active local members safely and privately.
-</div>
-
-<div class="card">
-<strong>✔ Easy To Start</strong>
-Quick access from your phone in seconds.
-</div>
-
-<div class="card">
-<strong>✔ Active Community</strong>
-New members joining every day.
-</div>
-
-<div class="live">
-People near you are online now 👀
-</div>
-
-<button class="cta" onclick="goOffer()">
-Start Browsing 
-</button>
-
-<div class="small">
-18+ only • Secure access
-</div>
-
-</div>
-</div>
-
-<script>
-
-function goOffer(){
-
-window.location.href='https://trk.uscrushy.online/click';
-
+<div class="content"><div class="badge">
+❤️ Active Members Online
+</div><h1>Meet Latino Singles Near You</h1><div class="desc">
+Browse active profiles and connect with local singles looking for friendship, dating, and meaningful connections.
+</div><button class="cta" onclick="goOffer()">
+View Profiles
+</button><div class="features">
+<div class="feature">✔ Free Registration</div>
+<div class="feature">✔ Active Community</div>
+<div class="feature">✔ Mobile Friendly</div>
+<div class="feature">✔ New Members Daily</div>
+</div><div class="footer">
+18+ Only • Secure Access
+</div></div></div><script>
+function goOffer() {
+    window.location.href='https://trk.uscrushy.online/click';
 }
-
-setInterval(function(){
-
-var names = ["Emma","Olivia","Sophia","Chloe","Megan","Ashley"];
-
-var cities = ["Toronto","Vancouver","Montreal","Calgary","Ottawa","Edmonton"];
-
-var popup = document.createElement("div");
-
-popup.className="popup";
-
-popup.innerHTML =
-"💬 " +
-names[Math.floor(Math.random()*names.length)] +
-" from " +
-cities[Math.floor(Math.random()*cities.length)] +
-" is online now";
-
-document.body.appendChild(popup);
-
-setTimeout(function(){
-
-popup.remove();
-
-},3000);
-
-},5000);
-
-</script>
-
-</body>
+</script></body>
 </html>
